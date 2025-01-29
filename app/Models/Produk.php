@@ -11,8 +11,9 @@ class Produk extends Model
     use HasFactory;
     protected $fillable = [
         'nama',
+        'deskripsi_singkat',
         'deskripsi',
-        'images'
+        'images',
     ];
 
     protected $casts = [

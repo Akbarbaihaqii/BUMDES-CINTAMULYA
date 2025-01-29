@@ -26,10 +26,12 @@ class ProdukResource extends Resource
                 Forms\Components\TextInput::make('nama')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('deskripsi')
+                Forms\Components\TextInput::make('deskripsi_singkat')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\FileUpload::make('images')
+                    ->maxLength(100),
+                Forms\Components\TextArea::make('deskripsi')
+                    ->required(),
+                    Forms\Components\FileUpload::make('images')
                     ->columns(1)
                     ->multiple()
                     ->directory('images'),
@@ -42,9 +44,13 @@ class ProdukResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('deskripsi')
+                Tables\Columns\TextColumn::make('deskripsi_singkat')
+                    ->limit(30)
                     ->searchable(),
-                Tables\Columns\TextColumn::make('images')
+                Tables\Columns\TextColumn::make('deskripsi')
+                    ->limit(30)
+                    ->searchable(),
+                Tables\Columns\ImageColumn::make('images')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
