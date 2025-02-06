@@ -14,10 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\IndexController;
 
+
 // Route untuk halaman Produk dan Layanan
 Route::get('/produk', [IndexController::class,'produk']);
 Route::get('/produk/{id}',[IndexController::class,'produk_detail']);
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/informasi-bumdes', function () {
+    return view('information');
+});
+
 Route::get('/tentang-kami', function () {
     return view('about');
 });

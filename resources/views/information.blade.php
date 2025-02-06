@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - Desa Cintamulya BUMDES</title>
+    <title>Informasi BUMDES - Desa Cintamulya BUMDES</title>
     <link href='https://data.lampungselatankab.go.id/uploads/group/2024-07-29-040818.339388Logo-Lampung-Selatan-1024x724.png' rel='shortcut icon'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             margin: 0;
@@ -106,6 +107,32 @@
             margin: 0;
             font-size: 28px;
         }
+        .content {
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            margin-top: 10px; /* Tambahkan jarak responsif antara navbar dan konten */
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+        .content p {
+            margin-bottom: 10px;
+        }
+        .info-section {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .info-section h3 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
         .image-gallery {
             display: flex;
             overflow: hidden; /* Sembunyikan gambar yang tidak terlihat */
@@ -116,7 +143,7 @@
         .image-gallery .gallery-wrapper {
             display: flex;
             transition: transform 0.5s ease; /* Animasi transisi */
-            width: calc(100% * 9); /* Pastikan lebar galeri sesuai dengan jumlah gambar */
+            width: calc(100% * 20); /* Pastikan lebar galeri sesuai dengan jumlah gambar */
         }
         .image-gallery img {
             width: 50vw; /* Lebar gambar 100% dari viewport */
@@ -125,21 +152,6 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             margin: 0 5px; /* Jarak antar gambar */
-        }
-        .content {
-            padding: 20px;
-            background-color: #ffffff;
-            color: #333333;
-            line-height: 1.6;
-            margin-top: 1ph; /* Tambahkan jarak responsif antara navbar dan konten */
-        }
-        .content h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #28a745;
-        }
-        .content p {
-            margin-bottom: 10px;
         }
         
     </style>
@@ -158,42 +170,39 @@
         </div>
     </nav>
 
-    <!-- Image Gallery -->
-    <div class="image-gallery">
-        <div class="gallery-wrapper">
-            <img src="{{ asset('images/Pabrik Padi 12.jpg') }}" alt="Gambar 1">
-            <img src="{{ asset('images/Pengrajin Tempe 8.jpg') }}" alt="Gambar 2">
-            <img src="{{ asset('images/Susu Kedelai 1.jpg') }}" alt="Gambar 3">
-            <img src="{{ asset('images/Cabai 3.jpg') }}" alt="Gambar 4">
-            <img src="{{ asset('images/Pengrajin Tempe 4.jpg') }}" alt="Gambar 5">
-            <img src="{{ asset('images/Tomat 1.jpg') }}" alt="Gambar 6">
-            <img src="{{ asset('images/Gambar KKN 5.jpg') }}" alt="Gambar 7">
-            <img src="{{ asset('images/Gambar 2.jpg') }}" alt="Gambar 8">
+    <div class="content">
+        <h2>Tentang BUMDES</h2>
+        <div class="info-section">
+            <h3>Deskripsi</h3>
+            <p>Badan Usaha Milik Desa (BUMDES) Desa Cintamulya didirikan untuk meningkatkan perekonomian masyarakat desa melalui pengelolaan sumber daya lokal dan penyediaan layanan yang bermanfaat bagi warga.</p>
+        </div>
+        <div class="info-section">
+            <h3>Visi</h3>
+            <p>Menjadi lembaga ekonomi yang mandiri dan berkelanjutan, serta berkontribusi terhadap kesejahteraan masyarakat Desa Cintamulya.</p>
+        </div>
+        <div class="info-section">
+            <h3>Misi</h3>
+            <p>1. Mengelola sumber daya desa secara efektif dan efisien.</p>
+            <p>2. Meningkatkan keterampilan dan pengetahuan masyarakat dalam bidang ekonomi.</p>
+            <p>3. Menyediakan produk dan layanan yang berkualitas untuk masyarakat.</p>
         </div>
     </div>
 
-    <!-- Content Section -->
-    <div class="content">
-        <h2>Profil BUMDES Desa Cintamulya</h2>
-        <p>
-            BUMDES Mulya Abadi Desa Cintamulya didirikan untuk meningkatkan kesejahteraan masyarakat 
-            melalui berbagai program inovatif dan usaha desa. Kami berkomitmen untuk memberikan pelayanan 
-            terbaik dan mendukung perekonomian lokal melalui pengelolaan sumber daya yang efektif.
-        </p>
-        <p>
-            Visi kami adalah menjadi badan usaha desa yang mandiri, profesional, dan inovatif dalam 
-            mendukung pembangunan desa. Dengan dukungan masyarakat dan pemerintah desa, kami terus 
-            berusaha untuk menghadirkan manfaat yang nyata bagi seluruh warga desa.
-        </p>
-        <h2>Website Desa Cintamulya</h2>
-        <p>
-            Website ini dikembangkan oleh salah satu mahasiswa KKN Universitas Lampung 2025 sebagai platform digital 
-            untuk memperkenalkan BUMDES Desa Cintamulya. Dengan tampilan modern dan informasi yang komprehensif, 
-            situs ini bertujuan untuk meningkatkan transparansi, mempermudah akses informasi, serta mendukung 
-            pertumbuhan ekonomi desa melalui layanan berbasis digital.
-        </p>
-
+    <!-- Galeri Gambar -->
+    <div class="image-gallery">
+        <div class="gallery-wrapper">
+            <img src="{{ asset('images/Gambar 1.jpg') }}" alt="Gambar 1">
+            <img src="{{ asset('images/Gambar 2.jpg') }}" alt="Gambar 2">
+            <img src="{{ asset('images/Gambar KKN 2.jpg') }}" alt="Gambar 3">
+            <img src="{{ asset('images/Gambar KKN 3.jpg') }}" alt="Gambar 4">
+            <img src="{{ asset('images/Gambar KKN 1.jpg') }}" alt="Gambar 5">
+            <img src="{{ asset('images/Gambar KKN 4.jpg') }}" alt="Gambar 6">
+            <img src="{{ asset('images/Gambar KKN 5.jpg') }}" alt="Gambar 7">
+            <img src="{{ asset('images/Gambar KKN 6.jpg') }}" alt="Gambar 8">
+            <img src="{{ asset('images/Gambar KKN 7.jpg') }}" alt="Gambar 9">
+        </div>
     </div>
+
     <!-- Navbar Bawah -->
     <footer class="footer-navbar">
         <div class="copyright">
